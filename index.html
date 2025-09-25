@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contrato de Amigos — Solo lectura</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="confetti" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="container">
+    <header>
+      <div>
+        <h1><span class="logo">💙</span> Contrato de Amigos <small class="small-note">(Solo lectura)</small></h1>
+        <div class="sub">Esta versión está bloqueada: edítalo solo modificando el archivo <code>script.js</code>.</div>
+      </div>
+      <div class="sub">¡Más color, más vibes!</div>
+    </header>
+
+    <aside class="panel" aria-label="Información">
+      <div class="lock-badge">🔒 Bloqueado — editar desde código</div>
+      <div class="help">Para cambiar las reglas, títulos o firmas abre <code>script.js</code> y modifica el objeto <code>state</code>. Guarda y sube de nuevo.</div>
+
+      <div style="margin-top:12px" class="muted">Acciones disponibles desde la página:</div>
+      <div style="margin-top:8px" class="controls">
+        <button id="exportJson">📦 Exportar JSON</button>
+        <button id="exportTxt">📄 Descargar TXT</button>
+        <button id="printBtn">🖨️ Imprimir / Guardar PDF</button>
+        <button class="secondary" id="viewCode">Ver instrucción</button>
+      </div>
+
+      <div class="note-code">
+        <strong>Cómo editar:</strong>
+        <ol>
+          <li>Abre <code>script.js</code> en tu editor.</li>
+          <li>Modifica la variable <code>state</code> (title, desc, partyA, partyB, rules, firmas).</li>
+          <li>Guarda y sube los archivos juntos (index.html + styles.css + script.js).</li>
+        </ol>
+      </div>
+
+    </aside>
+
+    <main class="panel contract-preview" id="preview">
+      <div class="contract-title">
+        <div>
+          <h2 id="pvTitle">Contrato de Amistad — (lectura)</h2>
+          <div class="meta" id="pvDesc">Reglas que mantienen la amistad sana y divertida.</div>
+        </div>
+        <div class="meta">¡Divertido y formal a la vez!</div>
+      </div>
+
+      <div class="parties">
+        <div class="party">
+          <div class="party-title">Partes</div>
+          <div class="party-line">Parte A: <strong id="partyA">(tu nombre)</strong></div>
+          <div class="party-line">Parte B: <strong id="partyB">(nombre del amigo)</strong></div>
+        </div>
+        <div class="party" style="min-width:160px">
+          <div class="party-title">Vigencia</div>
+          <div class="party-line">Desde: <span id="startDate">--</span></div>
+          <div class="party-line">Última edición: <span id="editedAt">--</span></div>
+        </div>
+      </div>
+
+      <div class="rules" id="rulesList"></div>
+
+      <div class="sign-area">
+        <div class="sig-box">
+          <div class="muted">Firma Parte A</div>
+          <div class="sig-preview" id="sigAview">—</div>
+        </div>
+        <div class="sig-box">
+          <div class="muted">Firma Parte B</div>
+          <div class="sig-preview" id="sigBview">—</div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="small-muted">Recuerda: si quieres editar, hazlo desde <code>script.js</code>. No hay inputs editables en esta página.</div>
+      <div class="small-muted">¿Quieres que desbloquee partes específicas? Dime cuáles.</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
