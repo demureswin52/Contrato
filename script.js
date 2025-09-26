@@ -2,8 +2,8 @@
 const state = {
   title: 'Contrato de Amistad — Versión Oficial',
   desc: 'Reglas que mantienen la amistad sana, leal y divertida. (Edita el archivo script.js para cambiar).',
-  partyA: 'Jandy Pérez',
-  partyB: 'Amigo Fiel',
+  partyA: 'Dereck',
+  partyB: 'Adriana',
   startDate: new Date().toISOString(),
   editedAt: new Date().toISOString(),
   sigA: 'Jandy Pérez — ' + new Date().toLocaleDateString(),
